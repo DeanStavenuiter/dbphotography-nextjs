@@ -1,0 +1,30 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+a:hover,
+.dropdown a:hover {
+  cursor: pointer;
+  color: rgb(191, 191, 191);
+}
+
+ul {
+  color: black !important;
+  display: flex;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+li {
+  margin-right: 1.5rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1;
+  text-transform: uppercase;
+}
