@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import styles from "@/styles/header.module.css";
 import Link from "next/link";
+import Burger from "./Burger";
 
 const Header = () => {
   return (
@@ -57,6 +58,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
+        <Burger/>
       </nav>
     </header>
   );

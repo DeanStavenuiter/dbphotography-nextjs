@@ -1,3 +1,8 @@
+:root{
+  --text: black
+
+}
+
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-style: normal;
@@ -18,11 +23,11 @@ ul {
   color: black !important;
   display: flex;
   list-style: none;
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
 }
 
 li {
-  margin-right: 1.5rem;
+  /* margin-right: 1.5rem; */
   font-style: normal;
   font-weight: 300;
   line-height: 1;
