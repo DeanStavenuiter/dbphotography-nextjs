@@ -1,20 +1,27 @@
-:root{
-  --text: black
+:root {
+  --text: rgb(0, 0, 0) 00;
+  --background-mobile-menu: rgb(255, 255, 255);
+  --background: rgb(245, 245, 245);
+  --shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
 
+html {
+  height: 100%;
 }
 
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 300;
+  height: 100%;
+  margin: 0;
 }
 a {
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
-a:hover,
-.dropdown a:hover {
+a:hover {
   cursor: pointer;
   color: rgb(191, 191, 191);
 }
@@ -23,13 +30,26 @@ ul {
   color: black !important;
   display: flex;
   list-style: none;
-  /* margin-bottom: 0; */
 }
 
 li {
-  /* margin-right: 1.5rem; */
   font-style: normal;
   font-weight: 300;
   line-height: 1;
   text-transform: uppercase;
+}
+
+p {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.85em;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.07em;
+  text-transform: none;
+  color: rgb(0, 0, 0);
+}
+
+main {
+  min-height: calc(100vh - 53.59px);
 }

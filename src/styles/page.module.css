@@ -1,0 +1,125 @@
+.imgOuter {
+  margin-top: 130px;
+  width: 100%;
+}
+
+.imgOuter img {
+  width: 100%;
+  height: auto;
+}
+
+.hr {
+  color: rgba(0, 0, 0, 0.663);
+  margin: 3rem 0;
+  margin-left: 25%;
+  width: 50vw;
+}
+
+.mainText {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 10vh;
+  text-align: center;
+  padding: 0 25px;
+}
+
+.mainText h1 {
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text",
+    "Times New Roman", serif;
+  font-size: 2em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.171em;
+  text-transform: lowercase;
+  color: rgb(0, 0, 0);
+}
+
+.portfolioCards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 7.5px;
+}
+
+.imgCardWrapper {
+  display: flex;
+}
+
+.imgCard {
+  max-width: 233px;
+  width: 100%;
+  height: auto;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.rowCards{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+
+.reviewsOuter {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  width: 100%;
+  text-align: center;
+}
+
+.review {
+  background-color: rgb(245, 245, 245);
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text",
+    "Times New Roman", serif;
+  margin: 0 0.5rem;
+  padding: 1rem;
+  max-width: 50%;
+  box-shadow: var(--shadow);
+}
+
+.right {
+  text-align: right;
+}
+
+.middle {
+  text-align: center;
+}
+
+/* mobile */
+@media only screen and (max-width: 875px) {
+  .reviews {
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--shadow);
+  }
+
+  .review {
+    max-width: 100%;
+    box-shadow: unset;
+    margin: 0;
+  }
+
+  .mainText {
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .rowCards{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
