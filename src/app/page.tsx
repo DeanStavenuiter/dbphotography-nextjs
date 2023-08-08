@@ -5,10 +5,14 @@ import styles from "../styles/page.module.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <>
+    <Head>
+      
+    </Head>
       <main className={styles.main}>
         <Header />
         <div className={styles.imgOuter}>

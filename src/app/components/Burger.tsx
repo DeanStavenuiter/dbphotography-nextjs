@@ -92,30 +92,30 @@ const Burger = () => {
                   }`}
                 >
                   <li>
-                    <Link href={"/couples"}>couples</Link>
+                    <Link href={"/wedding"}>wedding</Link>
+                  </li>
+                  <li>
+                    <Link href={"/female-portrait"}>female portrait</Link>
                   </li>
                   <li>
                     <Link href={"/family"}>family</Link>
                   </li>
                   <li>
-                    <Link href={"/portraits"}>portraits</Link>
-                  </li>
-                  <li>
-                    <Link href={"/motherhood"}>motherhood</Link>
+                    <Link href={"/newborn"}>newborn</Link>
                   </li>
                 </ul>
               </li>
               <li >
-                <Link href={"#"}className={styles.hasDropdown} onClick={toggleDropDownPrices}>
+                <Link href={'/prijzen'}className={styles.hasDropdown} onClick={toggleDropDownPrices}>
                   prijzen
-                  <KeyboardArrowDownOutlinedIcon
+                  {/* <KeyboardArrowDownOutlinedIcon
                     className={`${styles.arrow} ${
                       showPrices ? styles.rotate : styles.rotateBack
                     }`}
-                  />
+                  /> */}
                 </Link>
 
-                <ul
+                {/* <ul
                   className={`${styles.dropdown} ${
                     showPrices ? styles.show : styles.hide
                   }`}
@@ -134,14 +134,14 @@ const Burger = () => {
                       portrait, couple, motherhood
                     </Link>
                   </li>
-                </ul>
+                </ul> */}
               </li>
 
               <li>
                 <Link href={"/contact"}>contact</Link>
               </li>
               <li>
-                <Link href={"/algemenevoorwaarden"}>algemene voorwaarden</Link>
+                <Link href={"/algemene-voorwaarden"}>algemene voorwaarden</Link>
               </li>
             </ul>
           </div>

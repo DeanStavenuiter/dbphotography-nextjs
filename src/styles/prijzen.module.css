@@ -1,0 +1,32 @@
+.pricesOuter{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10rem;
+    padding: 35px;
+}
+
+.prices{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    width: 50%;
+    padding: 0 35px;
+    box-shadow: var(--shadow);
+}
+
+@media only screen and (max-width: 875px) {
+.pricesOuter{
+    padding: 35px 0;
+}
+
+    .prices{
+        width: 90%;
+        text-align: center;
+        padding: 0;
+    }
+}

@@ -1,7 +1,3 @@
-.main {
-  /* padding-top: 10rem; */
-}
-
 .mainContainer {
   display: flex;
   justify-content: center;
@@ -67,7 +63,7 @@
 @media only screen and (max-width: 875px) {
   .mainContainer {
     margin: 0 15px;
-    padding: 0 15px;
+    /* padding: 0 15px; */
   }
 
   .aboutText {
@@ -78,7 +74,7 @@
   .aboutPicture {
     min-width: unset;
     width: unset;
-    padding: 15px;
+    padding: 35px;
     margin: 0 0 35px 0;
   }
 

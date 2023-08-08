@@ -41,7 +41,7 @@ const Header = () => {
               </div>
             </li>
             <li className={`${styles.navItem} ${styles.prijzen}`}>
-              <Link href="#">prijzen</Link>
+              <Link href={"/prijzen"}>prijzen</Link>
               <div className={styles.dropdown}>
                 <Link href={"/prijzen/family"}>family</Link>
                 <Link href={"/prijzen/newborn"}>newborn</Link>
@@ -55,7 +55,7 @@ const Header = () => {
               <Link href={"/contact"}>contact</Link>
             </li>
             <li className={styles.navItem}>
-              <Link href={"/algemenevoorwaarden"}>algemene voorwaarden</Link>
+              <Link href={"/algemene-voorwaarden"}>algemene voorwaarden</Link>
             </li>
           </ul>
         </div>

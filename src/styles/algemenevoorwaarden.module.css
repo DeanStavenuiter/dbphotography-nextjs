@@ -1,0 +1,39 @@
+.mainText{
+    margin: 10rem 35px 75px;
+    padding: 35px;
+    background-color: var(--background);
+    box-shadow: var(--shadow);
+}
+
+
+.mainText h1{
+    font-family: Garamond,Baskerville,"Baskerville Old Face","Hoefler Text","Times New Roman",serif;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.171em;
+    text-transform: lowercase;
+    color: rgb(0,0,0);
+    padding-left: 1rem;
+    
+}
+.mainText p {
+    font-family: Garamond,Baskerville,"Baskerville Old Face","Hoefler Text","Times New Roman",serif;
+    font-size: 1rem;
+    padding-left: 1rem;
+
+}
+.mainText li{
+    font-family: Garamond,Baskerville,"Baskerville Old Face","Hoefler Text","Times New Roman",serif;
+    text-transform: none;
+    font-size: 0.90rem;
+}
+@media only screen and (min-width: 600px){
+   .navbar{
+    top: 0;
+   }
+   .main-text{
+    margin-top: 11rem;
+   }
+}
