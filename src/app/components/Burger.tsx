@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import styles from "@/styles/hamburger.module.css";
 import Link from "next/link";
@@ -6,15 +5,30 @@ import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDown
 
 const Burger = () => {
   const [active, setActive] = useState<Boolean | null>(null);
-  const [showPrices, setShowPrices] = useState(false);
   const [showPortfolio, setShowPortfolio] = useState(false);
+  const [showBruiloft, setShowBruiloft] = useState(false);
+  const [showPortrait, setShowPortrait] = useState(false);
+  const [showFamilie, setShowFamilie] = useState(false);
+  const [showNewborn, setShowNewborn] = useState(false);
 
-  const toggleDropDownPrices = () => {
-    setShowPrices((prev) => !prev);
-  };
-
-  const toggleDropDownPortfolio = () => {
-    setShowPortfolio((prev) => !prev);
+  const toggleDropDown = (dropdown: string) => {
+    switch (dropdown) {
+      case "portfolio":
+        setShowPortfolio((prev) => !prev);
+        break;
+      case "bruiloft":
+        setShowBruiloft((prev) => !prev);
+        break;
+      case "portrait":
+        setShowPortrait((prev) => !prev);
+        break;
+      case "familie":
+        setShowFamilie((prev) => !prev);
+      case "newborn":
+        setShowNewborn((prev) => !prev);
+      default:
+        break;
+    }
   };
 
   const toggleActive = () => {
@@ -77,7 +91,7 @@ const Burger = () => {
                 <Link
                   href={"#"}
                   className={styles.hasDropdown}
-                  onClick={toggleDropDownPortfolio}
+                  onClick={() => toggleDropDown("portfolio")}
                 >
                   portfolio
                   <KeyboardArrowDownOutlinedIcon
@@ -92,51 +106,116 @@ const Burger = () => {
                   }`}
                 >
                   <li>
-                    <Link href={"/wedding"}>wedding</Link>
+                    <Link
+                      href={"#"}
+                      className={styles.hasDropdown}
+                      onClick={() => toggleDropDown("bruiloft")}
+                    >
+                      wedding
+                      <KeyboardArrowDownOutlinedIcon
+                        className={`${styles.arrow} ${
+                          showBruiloft ? styles.rotate : styles.rotateBack
+                        }`}
+                      />
+                    </Link>
+                    <ul
+                      className={`${styles.dropdown} ${
+                        showBruiloft ? styles.show : styles.hide
+                      }`}
+                    >
+                      <li>
+                        <Link href={"/portfolio/bruiloft/D&H"}>D&H</Link>
+                      </li>
+                      <li>
+                        <Link href={"/portfolio/bruiloft/D&G"}>D&G</Link>
+                      </li>
+                    </ul>
                   </li>
                   <li>
-                    <Link href={"/female-portrait"}>female portrait</Link>
+                    <Link
+                      href={"#"}
+                      onClick={() => toggleDropDown("portrait")}
+                      className={styles.hasDropdown}
+                    >
+                      Female portrait
+                      <KeyboardArrowDownOutlinedIcon
+                        className={`${styles.arrow} ${
+                          showPortrait ? styles.rotate : styles.rotateBack
+                        }`}
+                      />
+                    </Link>{" "}
+                    <ul
+                      className={`${styles.dropdown} ${
+                        showPortrait ? styles.show : styles.hide
+                      }`}
+                    >
+                      <li>
+                        <Link href={"/portfolio/female-portrait/Laura"}>Laura</Link>
+                      </li>
+                      <li>
+                        <Link href={"/portfolio/female-portrait/Femke"}>Femke</Link>
+                      </li>
+                    </ul>
                   </li>
                   <li>
-                    <Link href={"/family"}>family</Link>
+                    <Link
+                      href={"#"}
+                      className={styles.hasDropdown}
+                      onClick={() => toggleDropDown("familie")}
+                    >
+                      familie
+                      <KeyboardArrowDownOutlinedIcon
+                        className={`${styles.arrow} ${
+                          showFamilie ? styles.rotate : styles.rotateBack
+                        }`}
+                      />
+                    </Link>
+                    <ul
+                      className={`${styles.dropdown} ${
+                        showFamilie ? styles.show : styles.hide
+                      }`}
+                    >
+                      <li>
+                        <Link href={"/portfolio/familie/home"}>Home</Link>
+                      </li>
+                      <li>
+                        <Link href={"/portfolio/familie/summer-nights"}>
+                          Summer nights
+                        </Link>
+                      </li>
+                    </ul>
                   </li>
                   <li>
-                    <Link href={"/newborn"}>newborn</Link>
-                  </li>
-                </ul>
-              </li>
-              <li >
-                <Link href={'/prijzen'}className={styles.hasDropdown} onClick={toggleDropDownPrices}>
-                  prijzen
-                  {/* <KeyboardArrowDownOutlinedIcon
-                    className={`${styles.arrow} ${
-                      showPrices ? styles.rotate : styles.rotateBack
-                    }`}
-                  /> */}
-                </Link>
-
-                {/* <ul
-                  className={`${styles.dropdown} ${
-                    showPrices ? styles.show : styles.hide
-                  }`}
-                >
-                  <li>
-                    <Link href={"/prijzen/family"}>family</Link>
-                  </li>
-                  <li>
-                    <Link href={"/prijzen/newborn"}>newborn</Link>
-                  </li>
-                  <li>
-                    <Link href={"/prijzen/dayinalife"}>day in a life</Link>
-                  </li>
-                  <li>
-                    <Link href={"/prijzen/portraitcouplemotherhood"}>
-                      portrait, couple, motherhood
+                    <Link
+                      href={"#"}
+                      className={styles.hasDropdown}
+                      onClick={() => toggleDropDown("newborn")}
+                    >
+                      newborn
+                      <KeyboardArrowDownOutlinedIcon
+                        className={`${styles.arrow} ${
+                          showNewborn ? styles.rotate : styles.rotateBack
+                        }`}
+                      />
                     </Link>
                   </li>
-                </ul> */}
+                  <ul
+                    className={`${styles.dropdown} ${
+                      showNewborn ? styles.show : styles.hide
+                    }`}
+                  >
+                    <li>
+                      <Link href={"/portfolio/newborn/Dante"}>Dante</Link>
+                    </li>
+                    <li>
+                      <Link href={"/portfolio/newborn/Mose"}>Mose</Link>
+                    </li>
+                  </ul>
+                </ul>
               </li>
-
+              <li>
+                <Link href={"/prijzen"}>prijzen</Link>
+              </li>
               <li>
                 <Link href={"/contact"}>contact</Link>
               </li>

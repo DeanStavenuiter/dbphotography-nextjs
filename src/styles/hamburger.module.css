@@ -25,7 +25,8 @@
   top: 125px;
   left: 0px;
   z-index: -1;
-  text-align: center;
+  text-align: left;
+  padding-left: 35px;
   scroll-behavior: auto;
 }
 
@@ -117,7 +118,7 @@
 
 .hasDropdown {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 

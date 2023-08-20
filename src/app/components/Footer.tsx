@@ -6,6 +6,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
+      <div className={styles.row}>
         <div className={styles.mobileHide}>
           <p>copyright © 2023 : DB Photography</p>
         </div>
@@ -17,10 +18,14 @@ const Footer = () => {
         </div>
 
         <div className={styles.mobileHide}>
-          <Link className={styles.font}  href="mailto:denisebiegelaar@gmail.com">
+          <Link className={styles.font} href="mailto:denisebiegelaar@gmail.com">
             denisebiegelaar@gmail.com
           </Link>
         </div>
+      </div>
+      <div className={styles.madeby}>
+        <p>Created by Dean Donovan.</p>
+      </div>
     </footer>
   );
 };

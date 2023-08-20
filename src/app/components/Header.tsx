@@ -1,11 +1,17 @@
-
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import styles from "@/styles/header.module.css";
 import Link from "next/link";
 import Burger from "./Burger";
+import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 
 const Header = () => {
+  const [showWedding, setShowWedding] = useState(false);
+
+  const toggleDropDownWedding = () => {
+    setShowWedding((prev) => !prev);
+  };
+
   return (
     <header className={styles.header}>
       <nav className={styles.navbar}>
@@ -32,24 +38,35 @@ const Header = () => {
             <li className={`${styles.navItem} ${styles.portfolio}`}>
               <Link href={"/portfolio"}>portfolio</Link>
               <div className={styles.dropdown}>
-                <Link href={"/portfolio/couples"}>couples</Link>
+                <Link className={styles.aWedding} onMouseOver={toggleDropDownWedding} href={"/portfolio/wedding"}>
+                  wedding
+                  <KeyboardArrowDownOutlinedIcon
+                    className={`${styles.arrow} ${
+                      showWedding ? styles.rotate : styles.rotateBack
+                    }`}
+                  />
+                </Link>
+                <div className={styles.dropdownWedding}>
+                  <Link href={"/portfolio/wedding/D&H"}>wedding D&H</Link>
+                  <Link href={"/portfolio/wedding/D&G"}>wedding D&G</Link>
+                </div>
+                <Link href={"/portfolio/femaleportrait"}>female portrait</Link>
                 <Link href={"/portfolio/family"}>family</Link>
                 <Link href={"/portfolio/newborn"}>newborn</Link>
-                <Link href={"/portfolio/portraits"}>portraits</Link>
+                <Link href={"/portfolio/geboorte"}>geboorte</Link>
                 <Link href={"/portfolio/motherhood"}>motherhood</Link>
-                <Link href={"/portfolio/dayinalife"}>day in a life</Link>
               </div>
             </li>
             <li className={`${styles.navItem} ${styles.prijzen}`}>
               <Link href={"/prijzen"}>prijzen</Link>
-              <div className={styles.dropdown}>
+              {/* <div className={styles.dropdown}>
                 <Link href={"/prijzen/family"}>family</Link>
                 <Link href={"/prijzen/newborn"}>newborn</Link>
                 <Link href={"/prijzen/dayinalife"}>day in a life</Link>
                 <Link href={"/prijzen/portraitcouplemotherhood"}>
                   portrait, couple, motherhood
                 </Link>
-              </div>
+              </div> */}
             </li>
             <li className={styles.navItem}>
               <Link href={"/contact"}>contact</Link>
@@ -59,7 +76,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <Burger/>
+        <Burger />
       </nav>
     </header>
   );
