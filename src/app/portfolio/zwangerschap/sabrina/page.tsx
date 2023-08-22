@@ -23,7 +23,7 @@ const Page = () => {
 
     // Specify your bucket name
     const bucketName = process.env.NEXT_PUBLIC_BUCKET_NAME!;
-    const prefix = "family:thuis/";
+    const prefix = "Sabrina/";
 
     // List objects in the bucket
     s3.listObjects({ Bucket: bucketName, Prefix: prefix }, (err, data) => {
@@ -43,40 +43,43 @@ const Page = () => {
     <main className={styles.main}>
       <div className={styles.album}>
         <div className={styles.col}>
-          {bucketItems.slice(0, 11).map((item, index) => {
+          {bucketItems.slice(0, 7).map((item, index) => {
             return (
               <Image
                 key={index}
-                alt={`thuis ${index}`}
+                alt={`Sabrina ${index}`}
                 src={`https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/${item}`}
                 width={500}
                 height={500}
+                priority
               />
             );
           })}
         </div>
         <div className={styles.col}>
-        {bucketItems.slice(11, 25).map((item, index) => {
+        {bucketItems.slice(7, 16).map((item, index) => {
             return (
               <Image
                 key={index}
-                alt={`thuis ${index}`}
+                alt={`Sabrina ${index}`}
                 src={`https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/${item}`}
                 width={500}
                 height={500}
+                priority
               />
             );
           })}
         </div>
         <div className={styles.col}>
-        {bucketItems.slice(25, 36).map((item, index) => {
+        {bucketItems.slice(16, 24).map((item, index) => {
             return (
               <Image
                 key={index}
-                alt={`thuis ${index}`}
+                alt={`Sabrina ${index}`}
                 src={`https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/${item}`}
                 width={500}
                 height={500}
+                priority
               />
             );
           })}

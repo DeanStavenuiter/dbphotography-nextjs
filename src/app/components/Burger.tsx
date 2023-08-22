@@ -164,12 +164,12 @@ const Burger = () => {
                       }`}
                     >
                       <li>
-                        <Link href={"/portfolio/female-portrait/Laura"}>
+                        <Link href={"/portfolio/female-portrait/laura"}>
                           Laura
                         </Link>
                       </li>
                       <li>
-                        <Link href={"/portfolio/female-portrait/Femke"}>
+                        <Link href={"/portfolio/female-portrait/femke"}>
                           Femke
                         </Link>
                       </li>
@@ -226,10 +226,10 @@ const Burger = () => {
                       }`}
                     >
                       <li>
-                        <Link href={"/portfolio/newborn/Dante"}>Dante</Link>
+                        <Link href={"/portfolio/newborn/dante"}>Dante</Link>
                       </li>
                       <li>
-                        <Link href={"/portfolio/newborn/Mose"}>Mose</Link>
+                        <Link href={"/portfolio/newborn/mose"}>Mose</Link>
                       </li>
                     </ul>
                   </li>
@@ -254,12 +254,12 @@ const Burger = () => {
                       }`}
                     >
                       <li>
-                        <Link href={"/portfolio/zwangerschap/Sabrina"}>
+                        <Link href={"/portfolio/zwangerschap/sabrina"}>
                           Sabrina
                         </Link>
                       </li>
                       <li>
-                        <Link href={"/portfolio/zwangerschap/Danique"}>
+                        <Link href={"/portfolio/zwangerschap/danique"}>
                           Danique
                         </Link>
                       </li>
@@ -286,7 +286,7 @@ const Burger = () => {
                       }`}
                     >
                       <li>
-                        <Link href={"/portfolio/geboorte/Jule"}>Jule</Link>
+                        <Link href={"/portfolio/geboorte/jule"}>Jule</Link>
                       </li>
                     </ul>
                   </li>

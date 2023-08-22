@@ -25,7 +25,7 @@
 }
 .logo {
   height: 125px !important;
-  width: auto;
+  width: auto !important;
 }
 .hamburger {
   display: none;
@@ -65,7 +65,9 @@
 .dropdownWedding,
 .dropdownPortrait,
 .dropdownFamily,
-.dropdownNewborn {
+.dropdownNewborn,
+.dropdownZwangerschap,
+.dropdownGeboorte {
   display: none;
   flex-direction: column;
 }
@@ -73,7 +75,9 @@
 .aWedding,
 .aPortrait,
 .aFamily,
-.aNewborn {
+.aNewborn,
+.aZwangerschap,
+.aGeboorte {
   display: flex;
   align-items: center;
 }
@@ -81,14 +85,18 @@
 .aWedding:hover ~ .dropdownWedding,
 .aPortrait:hover ~ .dropdownPortrait,
 .aFamily:hover ~ .dropdownFamily,
-.aNewborn:hover ~ .dropdownNewborn {
+.aNewborn:hover ~ .dropdownNewborn,
+.aZwangerschap:hover ~ .dropdownZwangerschap,
+.aGeboorte:hover ~ .dropdownGeboorte {
   display: flex;
 }
 
 .dropdownWedding:hover,
 .dropdownPortrait:hover,
 .dropdownFamily:hover,
-.dropdownNewborn:hover {
+.dropdownNewborn:hover,
+.dropdownZwangerschap:hover,
+.dropdownGeboorte:hover {
   display: flex;
 }
 

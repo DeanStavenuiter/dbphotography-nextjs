@@ -11,10 +11,8 @@ const Header = () => {
   const [showPortrait, setShowPortrait] = useState(false);
   const [showFamilie, setShowFamilie] = useState(false);
   const [showNewborn, setShowNewborn] = useState(false);
-
-  // const toggleDropDownWedding = () => {
-  //   setShowWedding((prev) => !prev);
-  // };
+  const [showZwangerschap, setShowZwangerschap] = useState(false);
+  const [showGeboorte, setShowGeboorte] = useState(false);
 
   const toggleDropDown = (dropdown: string) => {
     switch (dropdown) {
@@ -29,8 +27,16 @@ const Header = () => {
         break;
       case "familie":
         setShowFamilie((prev) => !prev);
+        break;
       case "newborn":
         setShowNewborn((prev) => !prev);
+        break;
+      case "zwangerschap":
+        setShowZwangerschap((prev) => !prev);
+        break;
+      case "geboorte":
+        setShowGeboorte((prev) => !prev);
+        break;
       default:
         break;
     }
@@ -47,6 +53,7 @@ const Header = () => {
               alt="DB photograpy logo"
               height={125}
               width={250}
+              priority
             />
           </Link>
         </div>
@@ -66,7 +73,7 @@ const Header = () => {
               <div className={styles.dropdown}>
                 <Link
                   className={styles.aWedding}
-                  onMouseOver={() => toggleDropDown("portfolio")}
+                  onMouseOver={() => toggleDropDown("bruiloft")}
                   href={"#"}
                 >
                   bruiloft
@@ -90,13 +97,13 @@ const Header = () => {
                   female portrait
                   <KeyboardArrowDownOutlinedIcon
                     className={`${styles.arrow} ${
-                      showBruiloft ? styles.rotate : styles.rotateBack
+                      showPortrait ? styles.rotate : styles.rotateBack
                     }`}
                   />
                 </Link>
                 <div className={styles.dropdownPortrait}>
-                  <Link href={"/portfolio/female-portrait/Laura"}>Laura</Link>
-                  <Link href={"/portfolio/female-portrait/Femke"}>Femke</Link>
+                  <Link href={"/portfolio/female-portrait/laura"}>Laura</Link>
+                  <Link href={"/portfolio/female-portrait/femke"}>Femke</Link>
                 </div>
 
                 {/* family */}
@@ -128,25 +135,49 @@ const Header = () => {
                   newborn
                   <KeyboardArrowDownOutlinedIcon
                     className={`${styles.arrow} ${
-                      showBruiloft ? styles.rotate : styles.rotateBack
+                      showNewborn ? styles.rotate : styles.rotateBack
                     }`}
                   />
                 </Link>
                 <div className={styles.dropdownNewborn}>
-                  <Link href={"/portfolio/newborn/Dante"}>Dante</Link>
-                  <Link href={"/portfolio/newborn/Mose"}>Mose</Link>
+                  <Link href={"/portfolio/newborn/dante"}>Dante</Link>
+                  <Link href={"/portfolio/newborn/mose"}>Mose</Link>
                 </div>
 
                 {/* zwangerschap */}
-                <Link href={"/portfolio/zwangerschap"}>
+                <Link
+                  className={styles.aZwangerschap}
+                  onMouseOver={() => toggleDropDown("zwangerschap")}
+                  href={"#"}
+                >
                   zwangerschap
                   <KeyboardArrowDownOutlinedIcon
                     className={`${styles.arrow} ${
-                      showBruiloft ? styles.rotate : styles.rotateBack
+                      showZwangerschap ? styles.rotate : styles.rotateBack
                     }`}
                   />
                 </Link>
-                <Link href={"/portfolio/geboorte"}>geboorte</Link>
+                <div className={styles.dropdownZwangerschap}>
+                  <Link href={"/portfolio/zwangerschap/sabrina"}>Sabrina</Link>
+                  <Link href={"/portfolio/zwangerschap/danique"}>Danique</Link>
+                </div>
+
+                {/* geboorte */}
+                <Link
+                  className={styles.aGeboorte}
+                  onMouseOver={() => toggleDropDown("geboorte")}
+                  href={"#"}
+                >
+                  geboorte
+                  <KeyboardArrowDownOutlinedIcon
+                    className={`${styles.arrow} ${
+                      showGeboorte ? styles.rotate : styles.rotateBack
+                    }`}
+                  />
+                </Link>
+                <div className={styles.dropdownGeboorte}>
+                <Link href={"/portfolio/geboorte/jule"}>Jule</Link>
+                </div>
               </div>
             </li>
             <li className={`${styles.navItem} ${styles.prijzen}`}>

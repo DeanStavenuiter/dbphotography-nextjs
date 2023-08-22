@@ -23,7 +23,7 @@ const Page = () => {
 
     // Specify your bucket name
     const bucketName = process.env.NEXT_PUBLIC_BUCKET_NAME!;
-    const prefix = "wedding D&G/";
+    const prefix = "Danique/";
 
     // List objects in the bucket
     s3.listObjects({ Bucket: bucketName, Prefix: prefix }, (err, data) => {
@@ -43,40 +43,46 @@ const Page = () => {
       <main className={styles.main}>
         <div className={styles.album}>
           <div className={styles.col}>
-            {bucketItems.slice(0, 13).map((item, index) => {
+            {bucketItems.slice(0, 8).map((item, index) => {
               return (
                 <Image
                   key={index}
-                  alt={`D & G ${index}`}
+                  alt={`
+                Danique ${index}`}
                   src={`https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/${item}`}
                   width={500}
                   height={500}
+                  priority
                 />
               );
             })}
           </div>
           <div className={styles.col}>
-          {bucketItems.slice(13, 23).map((item, index) => {
+            {bucketItems.slice(8, 17).map((item, index) => {
               return (
                 <Image
                   key={index}
-                  alt={`D & G ${index}`}
+                  alt={`
+                Danique ${index}`}
                   src={`https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/${item}`}
                   width={500}
                   height={500}
+                  priority
                 />
               );
             })}
           </div>
           <div className={styles.col}>
-          {bucketItems.slice(23, 34).map((item, index) => {
+            {bucketItems.slice(17, 24).map((item, index) => {
               return (
                 <Image
                   key={index}
-                  alt={`D & G ${index}`}
+                  alt={`
+                Danique ${index}`}
                   src={`https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/${item}`}
                   width={500}
                   height={500}
+                  priority
                 />
               );
             })}
