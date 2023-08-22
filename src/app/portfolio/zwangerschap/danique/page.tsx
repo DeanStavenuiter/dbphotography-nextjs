@@ -1,11 +1,12 @@
-"use client";
-
+"use client";;
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
 import React, { useEffect, useState } from "react";
 import styles from "@/styles/album.module.css";
 import Image from "next/image";
 import AWS from "aws-sdk";
+
+import { S3 } from "@aws-sdk/client-s3";
 
 const Page = () => {
   const [bucketItems, setBucketItems] = useState<string[]>([]);
@@ -19,7 +20,7 @@ const Page = () => {
     });
 
     // Create an S3 instance
-    const s3 = new AWS.S3();
+    const s3 = new S3();
 
     // Specify your bucket name
     const bucketName = process.env.NEXT_PUBLIC_BUCKET_NAME!;
@@ -31,7 +32,7 @@ const Page = () => {
         console.error("Error listing bucket items:", err);
       } else {
         // console.log(data.Contents);
-        const itemKeys = data.Contents?.map((item) => item.Key || "") || [];
+        const itemKeys = data?.Contents?.map((item) => item.Key || "") || [];
         setBucketItems(itemKeys);
       }
     });
