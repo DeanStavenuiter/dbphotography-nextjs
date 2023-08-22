@@ -1,41 +1,49 @@
-"use client";;
+"use client";
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
 import React, { useEffect, useState } from "react";
 import styles from "@/styles/album.module.css";
 import Image from "next/image";
-import AWS from "aws-sdk";
-
-import { S3 } from "@aws-sdk/client-s3";
+import {
+  S3Client,
+  ListObjectsCommand,
+  ListObjectsOutput,
+} from "@aws-sdk/client-s3";
 
 const Page = () => {
   const [bucketItems, setBucketItems] = useState<string[]>([]);
 
   useEffect(() => {
-    // Configure AWS
-    AWS.config.update({
-      region: "eu-north-1",
-      accessKeyId: process.env.NEXT_PUBLIC_ACCESS_KEY,
-      secretAccessKey: process.env.NEXT_PUBLIC_SECRET_KEY,
-    });
-
     // Create an S3 instance
-    const s3 = new S3();
+    const s3 = new S3Client({
+      region: "eu-north-1",
+      credentials: {
+        accessKeyId: process.env.NEXT_PUBLIC_ACCESS_KEY!,
+        secretAccessKey: process.env.NEXT_PUBLIC_SECRET_KEY!,
+      },
+    });
 
     // Specify your bucket name
     const bucketName = process.env.NEXT_PUBLIC_BUCKET_NAME!;
     const prefix = "wedding D&G/";
 
-    // List objects in the bucket
-    s3.listObjects({ Bucket: bucketName, Prefix: prefix }, (err:Error, data:any) => {
-      if (err) {
-        console.error("Error listing bucket items:", err);
-      } else {
-        // console.log(data.Contents);
-        const itemKeys = data.Contents?.map((item:any) => item.Key || "") || [];
+    (async () => {
+      try {
+        // List objects in the bucket
+        const command = new ListObjectsCommand({
+          Bucket: bucketName,
+          Prefix: prefix,
+        });
+        const data: ListObjectsOutput = await s3.send(command);
+
+        const itemKeys = data.Contents?.map((item) => item.Key || "") || [];
+        console.log(itemKeys); // Do something with the item keys
+
         setBucketItems(itemKeys);
+      } catch (err) {
+        console.error("Error listing bucket items:", err);
       }
-    });
+    })();
   }, []);
 
   return (
@@ -57,7 +65,7 @@ const Page = () => {
             })}
           </div>
           <div className={styles.col}>
-          {bucketItems.slice(13, 23).map((item, index) => {
+            {bucketItems.slice(13, 23).map((item, index) => {
               return (
                 <Image
                   key={index}
@@ -70,7 +78,7 @@ const Page = () => {
             })}
           </div>
           <div className={styles.col}>
-          {bucketItems.slice(23, 34).map((item, index) => {
+            {bucketItems.slice(23, 34).map((item, index) => {
               return (
                 <Image
                   key={index}

@@ -84,8 +84,8 @@ const Header = () => {
                   />
                 </Link>
                 <div className={styles.dropdownWedding}>
-                  <Link href={"/portfolio/bruiloft/D&H"}>bruiloft D&H</Link>
-                  <Link href={"/portfolio/bruiloft/D&G"}>bruiloft D&G</Link>
+                  <Link href={"/portfolio/bruiloft/DH"}>bruiloft D&H</Link>
+                  <Link href={"/portfolio/bruiloft/DG"}>bruiloft D&G</Link>
                 </div>
 
                 {/* female portrait */}

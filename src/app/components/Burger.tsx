@@ -136,10 +136,10 @@ const Burger = () => {
                       }`}
                     >
                       <li>
-                        <Link href={"/portfolio/bruiloft/D&H"}>D&H</Link>
+                        <Link href={"/portfolio/bruiloft/DH"}>D&H</Link>
                       </li>
                       <li>
-                        <Link href={"/portfolio/bruiloft/D&G"}>D&G</Link>
+                        <Link href={"/portfolio/bruiloft/DG"}>D&G</Link>
                       </li>
                     </ul>
                   </li>
