@@ -10,11 +10,9 @@ import Head from "next/head";
 export default function Home() {
   return (
     <>
-    <Head>
-      
-    </Head>
+      {/* <Head></Head> */}
+      <Header />
       <main className={styles.main}>
-        <Header />
         <div className={styles.imgOuter}>
           <Image
             src={

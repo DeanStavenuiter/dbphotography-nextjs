@@ -10,6 +10,8 @@ const Burger = () => {
   const [showPortrait, setShowPortrait] = useState(false);
   const [showFamilie, setShowFamilie] = useState(false);
   const [showNewborn, setShowNewborn] = useState(false);
+  const [showZwangerschap, setShowZwangerschap] = useState(false);
+  const [showGeboorte, setShowGeboorte] = useState(false);
 
   const toggleDropDown = (dropdown: string) => {
     switch (dropdown) {
@@ -24,8 +26,16 @@ const Burger = () => {
         break;
       case "familie":
         setShowFamilie((prev) => !prev);
+        break;
       case "newborn":
         setShowNewborn((prev) => !prev);
+        break;
+      case "zwangerschap":
+        setShowZwangerschap((prev) => !prev);
+        break;
+      case "geboorte":
+        setShowGeboorte((prev) => !prev);
+        break;
       default:
         break;
     }
@@ -100,6 +110,8 @@ const Burger = () => {
                     }`}
                   />
                 </Link>
+
+                {/* bruiloft */}
                 <ul
                   className={`${styles.dropdown} ${
                     showPortfolio ? styles.show : styles.hide
@@ -131,6 +143,8 @@ const Burger = () => {
                       </li>
                     </ul>
                   </li>
+
+                  {/* portrait */}
                   <li>
                     <Link
                       href={"#"}
@@ -150,13 +164,19 @@ const Burger = () => {
                       }`}
                     >
                       <li>
-                        <Link href={"/portfolio/female-portrait/Laura"}>Laura</Link>
+                        <Link href={"/portfolio/female-portrait/Laura"}>
+                          Laura
+                        </Link>
                       </li>
                       <li>
-                        <Link href={"/portfolio/female-portrait/Femke"}>Femke</Link>
+                        <Link href={"/portfolio/female-portrait/Femke"}>
+                          Femke
+                        </Link>
                       </li>
                     </ul>
                   </li>
+
+                  {/* familie */}
                   <li>
                     <Link
                       href={"#"}
@@ -185,6 +205,8 @@ const Burger = () => {
                       </li>
                     </ul>
                   </li>
+
+                  {/* newborn */}
                   <li>
                     <Link
                       href={"#"}
@@ -198,19 +220,76 @@ const Burger = () => {
                         }`}
                       />
                     </Link>
+                    <ul
+                      className={`${styles.dropdown} ${
+                        showNewborn ? styles.show : styles.hide
+                      }`}
+                    >
+                      <li>
+                        <Link href={"/portfolio/newborn/Dante"}>Dante</Link>
+                      </li>
+                      <li>
+                        <Link href={"/portfolio/newborn/Mose"}>Mose</Link>
+                      </li>
+                    </ul>
                   </li>
-                  <ul
-                    className={`${styles.dropdown} ${
-                      showNewborn ? styles.show : styles.hide
-                    }`}
-                  >
-                    <li>
-                      <Link href={"/portfolio/newborn/Dante"}>Dante</Link>
-                    </li>
-                    <li>
-                      <Link href={"/portfolio/newborn/Mose"}>Mose</Link>
-                    </li>
-                  </ul>
+
+                  {/* zwangerschap */}
+                  <li>
+                    <Link
+                      href={"#"}
+                      className={styles.hasDropdown}
+                      onClick={() => toggleDropDown("zwangerschap")}
+                    >
+                      zwangerschap
+                      <KeyboardArrowDownOutlinedIcon
+                        className={`${styles.arrow} ${
+                          showZwangerschap ? styles.rotate : styles.rotateBack
+                        }`}
+                      />
+                    </Link>{" "}
+                    <ul
+                      className={`${styles.dropdown} ${
+                        showZwangerschap ? styles.show : styles.hide
+                      }`}
+                    >
+                      <li>
+                        <Link href={"/portfolio/zwangerschap/Sabrina"}>
+                          Sabrina
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href={"/portfolio/zwangerschap/Danique"}>
+                          Danique
+                        </Link>
+                      </li>
+                    </ul>
+                  </li>
+
+                  {/* geboorte */}
+                  <li>
+                    <Link
+                      href={"#"}
+                      className={styles.hasDropdown}
+                      onClick={() => toggleDropDown("geboorte")}
+                    >
+                      geboorte
+                      <KeyboardArrowDownOutlinedIcon
+                        className={`${styles.arrow} ${
+                          showGeboorte ? styles.rotate : styles.rotateBack
+                        }`}
+                      />
+                    </Link>{" "}
+                    <ul
+                      className={`${styles.dropdown} ${
+                        showGeboorte ? styles.show : styles.hide
+                      }`}
+                    >
+                      <li>
+                        <Link href={"/portfolio/geboorte/Jule"}>Jule</Link>
+                      </li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
               <li>

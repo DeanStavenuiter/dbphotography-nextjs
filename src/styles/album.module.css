@@ -1,0 +1,29 @@
+.main{
+    margin-top: 130px;
+}
+
+.album{
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    background-color: var(--background);
+    max-width: 100%;
+    padding: 24px;
+    gap: 24px;
+    margin: 35px;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 0 0 auto;
+    width: 32%;
+}
+
+.col img {
+    width: 100%;
+    height: auto;
+    /* height: 100%; */
+}
+
