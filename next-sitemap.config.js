@@ -1,7 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 
 module.exports = {
-  siteUrl: 'https://belasvof.nl',
+  siteUrl: 'https://example.com',
   generateRobotsTxt: true,
 }
 

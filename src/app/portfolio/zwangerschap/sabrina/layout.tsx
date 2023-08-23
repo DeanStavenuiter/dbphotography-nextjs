@@ -1,25 +1,11 @@
-import "../styles/globals.css";
+import "../../styles/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Denise B Photography",
-    template: " %s | Denise B Photography",
-  },
-  keywords: [
-    "Fotograaf",
-    "Denise",
-    "Biegelaar",
-    "DBphotography",
-    "Photography",
-    "Familie",
-    "lifestyle",
-    "DB",
-  ],
-  creator: "Dean Donovan | info@deanstavenuiter.nl",
+  title: "Sabrina | Denise B Photography",
   description:
     "DB Photography is een familie & lifestyle fotograaf, die echte momenten op een ongedwongen en liefdevolle manier vastlegt",
   icons: {
