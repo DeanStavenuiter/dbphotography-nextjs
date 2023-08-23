@@ -4,7 +4,6 @@ import Header from "@/app/components/Header";
 import React, { useEffect, useState } from "react";
 import styles from "@/styles/album.module.css";
 import Image from "next/image";
-import AWS from "aws-sdk";
 import {
   S3Client,
   ListObjectsCommand,
