@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { sendMail } from "./nodemailer";
+import { sendMail } from "./mail";
+
 
 export const POST = async (request: NextRequest, response: NextResponse) => {
   try {
