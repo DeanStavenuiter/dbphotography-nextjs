@@ -7,14 +7,30 @@
   margin: 0 135px;
 }
 
+.formOuter {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--background);
+  width: 50%;
+  padding: 35px;
+  margin-bottom: 35px;
+  box-shadow: var(--shadow);
+}
+
+.formOuter h1 {
+  padding: 0 35px;
+  text-align: center;
+}
+
 .contactInformation {
   display: flex;
   flex-direction: column;
   text-align: center;
   background-color: var(--background);
   width: 50%;
-  padding: 100px 15px 15px 0;
-  box-shadow: var(--shadow);
+  padding: 35px 15px 15px 0;
+  /* box-shadow: var(--shadow); */
 }
 
 .contactInformation h1 {
@@ -34,10 +50,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 50%;
   background-color: var(--background);
   box-shadow: var(--shadow);
   padding: 35px;
+  margin-bottom: 35px;
 }
 
 .pictureContainer img {
@@ -67,25 +85,30 @@
     width: 100%;
     padding: 15px;
   }
+
+  .formOuter{
+    width: 100%;
+    padding: 15px;
+  }
 }
 
 @media only screen and (max-width: 875px) {
-.mainContainer{
+  .mainContainer {
     margin: 35px;
-}
+    padding-top: 120px;
+  }
 
-.contactInformation {
+  .contactInformation {
     padding: 15px;
   }
 
-.pictureContainer {
+  .pictureContainer {
     /* margin: 0 35px; */
     padding: 15px;
   }
 
-/* .pictureContainer img {
-    width: auto;
-    height: 100%;
-} */
-
+  .pictureContainer img {
+    width: 100%;
+    height: auto;
+}
 }

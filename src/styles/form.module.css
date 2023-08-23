@@ -1,0 +1,186 @@
+  .formInner{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .lablesAndInputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    width: 50%;
+  }
+  
+  .labelInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .labelInput label {
+    margin: 3px 0;
+    color: var(--text);
+    text-align: left;
+  }
+  
+  .labelInput input {
+    background-color: var(--background);
+    border: 0px;
+    border-bottom: 1px solid rgb(209, 209, 209);
+    box-shadow: var(--shadow);
+    color: var(--text);
+    padding-left: 3px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.85em;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.07em;
+  }
+  
+  .labelInput input:focus-visible {
+    border: 0px;
+    border-bottom: 1px solid rgb(194, 194, 194);
+    outline: none;
+    color: var(--text);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .labelInput input:-webkit-autofill,
+  .labelInput input:-webkit-autofill:focus {
+    transition: background-color 0s 600000s, color 0s 600000s;
+  }
+  
+  .labelInput textarea {
+    background-color: var(--background);
+    border: 0px;
+    border-bottom: 1px solid rgb(209, 209, 209);
+    box-shadow: var(--shadow);
+    height: 150px;
+    resize: none;
+    color: var(--text);
+    font-family: var(--font) ;
+    font-size: 0.85em;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.07em;
+  }
+  
+  .labelInput textarea:focus-visible {
+    border: 1px solid var(--input-focus);
+    outline: none;
+    color: var(--text);
+    font-family: var(--font);
+    border: 0px;
+    border-bottom: 1px solid rgb(194, 194, 194);
+    outline: none;
+    color: var(--text);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .errorOuter{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .error{
+    width: 100%;
+    background-color: rgb(253, 237, 237);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 16px;
+    border-radius: 4px;
+    margin: 15px 0;
+    color: rgb(95, 33, 32);
+  }
+  
+  .error svg{
+    color: #d32f2f
+  }
+  
+  .successOuter{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .success{
+    width: 100%;
+    background-color: rgb(238, 253, 237);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 16px;
+    border-radius: 4px;
+    margin: 15px 0;
+    color: rgb(36, 95, 32);
+  }
+  
+  .success svg{
+    color: #46ae21
+  }
+  
+  .spinnerOuter{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    margin-left: 15px;
+  }
+  
+  .buttonOuter{
+    display: flex;
+    align-items: center;
+  
+  }
+
+  .buttonOuter button {
+    padding: 7px;
+    margin-top: 5px;
+    width: 50%;
+    color: var(--text);
+    background-color: var(--button);
+    border: 1px solid var(--button-border);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 17px;
+    font-weight: 100;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.85em;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.07em;
+  }
+  
+  .buttonOuter button:hover {
+    cursor: pointer;
+    background-color: var(--button-hover);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .buttonOuter button:active {
+    background-color: var(--button-active);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  @media only screen and (max-width: 875px) {
+    /* .form{
+        width: 90%;
+        justify-content: flex-start;
+        padding:0 35px ;
+    } */
+
+    .lablesAndInputs{
+        width: 100%;
+    }
+
+    .labelInput input{
+        /* width: 100% */
+    };
+
+    .labelInput textarea {
+        width: 100%;
+    }
+  }

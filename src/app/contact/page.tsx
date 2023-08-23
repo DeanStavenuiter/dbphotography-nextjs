@@ -5,15 +5,26 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import styles from "@/styles/contact.module.css";
 import Image from "next/image";
+import Form from "../components/Form";
 
 const page = () => {
   return (
     <>
       <main>
         <Header />
-
         <div className={styles.mainContainer}>
-          <div className={styles.contactInformation}>
+          <div className={styles.formOuter}>
+          <h1>Contact</h1>
+            <Form />
+          </div>
+          <div className={styles.pictureContainer}>
+            <Image
+              src="https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/about/SophieBelPhotography_Denise-2.jpg"
+              width={350}
+              height={500}
+              alt="Denise met Bobby"
+            />
+            <div className={styles.contactInformation}>
               <h1>Contact gegevens</h1>
               <p>
                 Denise Duindam-Biegelaar
@@ -30,14 +41,7 @@ const page = () => {
                 <br />
                 denisebiegelaar@gmail.com
               </p>
-          </div>
-          <div className={styles.pictureContainer}>
-            <Image
-              src="https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/about/SophieBelPhotography_Denise-2.jpg"
-              width={350}
-              height={500}
-              alt="Denise met Bobby"
-            />
+            </div>
           </div>
         </div>
       </main>
