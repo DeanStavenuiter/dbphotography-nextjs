@@ -53,23 +53,23 @@ const Form = () => {
       setErrorMessageLastName(""), setIsLoading(false);
     }
     if (!regexEmail.test(email)) {
-      return setErrorMessageEmail("Vul dit veld in aub."), setIsLoading(false);
+      return setErrorMessageEmail("Vul een email adres in aub."), setIsLoading(false);
     } else {
       setErrorMessageEmail(""), setIsLoading(false);
     }
     if (!regexPhone.test(phone)) {
-      return setErrorMessagePhone("Vul dit veld in aub."), setIsLoading(false);
+      return setErrorMessagePhone("Vul een telefoonnummer in aub."), setIsLoading(false);
     } else {
       setErrorMessagePhone(""), setIsLoading(false);
     }
     if (!regexText.test(shoot)) {
-      return setErrorMessageShoot("Vul dit veld in aub."), setIsLoading(false);
+      return setErrorMessageShoot("Vul een soort shoot in aub."), setIsLoading(false);
     } else {
       setErrorMessageShoot(""), setIsLoading(false);
     }
     if (!regexText.test(location)) {
       return (
-        setErrorMessageLocation("Vul dit veld in aub."), setIsLoading(false)
+        setErrorMessageLocation("Vul een voorkeur locatie in aub."), setIsLoading(false)
       );
     } else {
       setErrorMessageLocation(""), setIsLoading(false);
@@ -236,11 +236,11 @@ const Form = () => {
               required
             />
           </div>
-          {errorMessageShoot && (
+          {errorMessageLocation && (
             <div className={styles.errorOuter}>
               <div className={styles.error}>
                 <InfoOutlinedIcon />
-                {errorMessageShoot}
+                {errorMessageLocation}
               </div>
             </div>
           )}

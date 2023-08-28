@@ -5,12 +5,10 @@ import styles from "../styles/page.module.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Link from "next/link";
-import Head from "next/head";
 
 export default function Home() {
   return (
     <>
-      {/* <Head></Head> */}
       <Header />
       <main className={styles.main}>
         <div className={styles.imgOuter}>
@@ -40,7 +38,7 @@ export default function Home() {
         <div className={styles.portfolioCards}>
           <div className={styles.rowCards}>
             <div className={styles.imgCardWrapper}>
-              <Link href={"/portfolio/wedding"}>
+              <Link href={"/portfolio/bruiloft"}>
                 <Image
                   className={styles.imgCard}
                   src="https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/home-images/Wedding.png"
@@ -51,7 +49,7 @@ export default function Home() {
               </Link>
             </div>
             <div className={styles.imgCardWrapper}>
-              <Link href={"/portfolio/female-portraits"}>
+              <Link href={"/portfolio/female-portrait"}>
                 <Image
                   className={styles.imgCard}
                   src="https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/home-images/Female-portrait.png"
@@ -62,7 +60,7 @@ export default function Home() {
               </Link>
             </div>
             <div className={styles.imgCardWrapper}>
-              <Link href={"/portfolio/family"}>
+              <Link href={"/portfolio/familie"}>
                 <Image
                   className={styles.imgCard}
                   src="https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/home-images/Family-black-white.png"
@@ -87,7 +85,7 @@ export default function Home() {
               </Link>
             </div>
             <div className={styles.imgCardWrapper}>
-              <Link href={"/portfolio/geboorte"}>
+              <Link href={"/portfolio/geboorte/jule"}>
                 <Image
                   className={styles.imgCard}
                   src="https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/home-images/Geboorte.png"
@@ -98,7 +96,7 @@ export default function Home() {
               </Link>
             </div>
             <div className={styles.imgCardWrapper}>
-              <Link href={"/portfolio/motherhood"}>
+              <Link href={"/portfolio/zwangerschap"}>
                 <Image
                   className={styles.imgCard}
                   src="https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/home-images/Motherhood.png"

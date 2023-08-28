@@ -3,19 +3,19 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import styles from "@/styles/portfolio.module.css"
+import styles from "@/styles/portfolio.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
 const page = () => {
   return (
     <>
+      <Header />
       <main className={styles.main}>
-        <Header />
         <div className={styles.portfolioCards}>
           <div className={styles.rowCards}>
             <div className={styles.imgCardWrapper}>
-              <Link href={"/portfolio/wedding"}>
+              <Link href={"/portfolio/bruiloft"}>
                 <Image
                   className={styles.imgCard}
                   src="https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/home-images/Wedding.png"
@@ -26,7 +26,7 @@ const page = () => {
               </Link>
             </div>
             <div className={styles.imgCardWrapper}>
-              <Link href={"/portfolio/female-portraits"}>
+              <Link href={"/portfolio/female-portrait"}>
                 <Image
                   className={styles.imgCard}
                   src="https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/home-images/Female-portrait.png"
@@ -37,7 +37,7 @@ const page = () => {
               </Link>
             </div>
             <div className={styles.imgCardWrapper}>
-              <Link href={"/portfolio/family"}>
+              <Link href={"/portfolio/familie"}>
                 <Image
                   className={styles.imgCard}
                   src="https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/home-images/Family-black-white.png"
@@ -61,7 +61,7 @@ const page = () => {
               </Link>
             </div>
             <div className={styles.imgCardWrapper}>
-              <Link href={"/portfolio/geboorte"}>
+              <Link href={"/portfolio/geboorte/jule"}>
                 <Image
                   className={styles.imgCard}
                   src="https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/home-images/Geboorte.png"
@@ -72,7 +72,7 @@ const page = () => {
               </Link>
             </div>
             <div className={styles.imgCardWrapper}>
-              <Link href={"/portfolio/motherhood"}>
+              <Link href={"/portfolio/zwangerschap"}>
                 <Image
                   className={styles.imgCard}
                   src="https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/home-images/Motherhood.png"
@@ -83,7 +83,7 @@ const page = () => {
               </Link>
             </div>
           </div>
-          </div>
+        </div>
       </main>
       <Footer />
     </>
