@@ -47,14 +47,19 @@ export default function Analytics() {
       <Script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-C1N29D3579"
-      ></Script>
-      <Script id="ga-script">
-        {` window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', '${GTM_TAG}');`}
-      </Script>
+      />
+      <Script
+        id="ga-script"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: ` 
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${GTM_TAG}');
+        `,
+        }}
+      />
     </>
   );
 }
