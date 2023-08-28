@@ -14,13 +14,13 @@ export const sendMail = async (
     port: 587,
     auth: {
       user: `${process.env.NEXT_PUBLIC_NODEMAILER_EMAIL}`,
-      pass: `${process.env.NEXT_PUBLIC_NODEMAILER_APP_PWD}`, // link: https://support.google.com/accounts/answer/185833?hl=en
+      pass: `${process.env.NEXT_PUBLIC_NODEMAILER_APP_PWD}`,
     },
   });
 
   const mail = {
     from: "noreply@DBphotography.nl",
-    to: "ddstavenuiter@gmail.com",
+    to: "denisebiegelaar@gmail.com",
     //   "ddstavenuiter@gmail.com",
     subject: `${firstName} ${lastName} heeft je gecontact voor een shoot`,
     html: `

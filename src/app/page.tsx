@@ -21,6 +21,7 @@ export default function Home() {
             alt="Bruidspaar op het strand"
             width={5617}
             height={3745}
+            priority
           />
         </div>
 
