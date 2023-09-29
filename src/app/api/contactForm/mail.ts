@@ -20,8 +20,9 @@ export const sendMail = async (
 
   const mail = {
     from: "noreply@DBphotography.nl",
-    to: "denisebiegelaar@gmail.com",
-    //   "ddstavenuiter@gmail.com",
+    to: 
+    "denisebiegelaar@gmail.com",
+      // "ddstavenuiter@gmail.com",
     subject: `${firstName} ${lastName} heeft je gecontact voor een shoot`,
     html: `
             <h1>Hi Denise Biegelaar,</h1> 

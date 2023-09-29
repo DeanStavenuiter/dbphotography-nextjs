@@ -22,16 +22,6 @@ export const POST = async (request: NextRequest, response: NextResponse) => {
         success: false,
       });
     }
-    console.log(
-      "Body",
-      firstName,
-      lastName,
-      email,
-      phone,
-      shoot,
-      location,
-      message
-    );
 
     try {
       const response = await sendMail(

@@ -93,17 +93,6 @@ const Form = () => {
     };
 
     try {
-      console.log("hallo?");
-      console.log(
-        "inputs: ",
-        firstName,
-        lastName,
-        email,
-        phone,
-        shoot,
-        location,
-        message
-      );
       setIsLoading(true);
       const response = await axios.post("/api/contactForm", {
         body,
@@ -115,7 +104,6 @@ const Form = () => {
         setErrorMessage(response.data.message);
         setIsLoading(false);
       }
-      console.log("response", response.data.message);
     } catch (error) {
       console.error("Error sending the form:", error);
     }
