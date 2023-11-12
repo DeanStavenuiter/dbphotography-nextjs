@@ -8,7 +8,6 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Denise B Photography",
-
   keywords: [
     "Fotograaf",
     "Denise",
@@ -73,7 +72,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="nl">
       <body className={inter.className}>
         {children}
         <Suspense>

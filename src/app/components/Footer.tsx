@@ -2,6 +2,7 @@ import React from "react";
 import styles from "@/styles/footer.module.css";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -23,6 +24,20 @@ const Footer = () => {
           </Link>
         </div>
       </div>
+      <div className={styles.certificaatOuter}>
+        <Link href={"https://degeboortefotograaf.nl"}>
+          <Image
+            src={
+              "https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/Geschoold+en+gecertificeerd+via+De+Geboortefotograaf.png"
+            }
+            width={300}
+            height={75}
+            alt="Geboortefotograaf certificaat"
+            className={styles.certificaatImg}
+          />
+        </Link>
+      </div>
+
       <div className={styles.madeby}>
         <p>Created by Dean Donovan.</p>
       </div>

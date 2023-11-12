@@ -1,7 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 
 module.exports = {
-  siteUrl: 'https://denisebphotography.nl/',
+  siteUrl: 'https://www.denisebphotography.nl/',
   generateRobotsTxt: true,
 }
 

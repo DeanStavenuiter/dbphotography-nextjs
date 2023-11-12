@@ -31,13 +31,31 @@
   color: rgb(0, 0, 0);
 }
 
+.certificaatOuter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 59px;
+}
+
+.certificaatImg {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
 /* mobile */
 @media only screen and (max-width: 875px) {
   .mobileHide {
     display: none;
   }
 
-  .madeby{
+  .madeby {
+    margin-left: unset;
+  }
+
+  .certificaatOuter {
     margin-left: unset;
   }
 }
