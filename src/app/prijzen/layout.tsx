@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Prijzen | Denise B Photography",
   description:
-    "DB Photography is een familie & lifestyle fotograaf, die echte momenten op een ongedwongen en liefdevolle manier vastlegt",
+    "DB Photography - Denise Biegelaar is een familie & lifestyle fotograaf uit Hoofddorp, die echte momenten op een ongedwongen en liefdevolle manier vastlegt",
   icons: {
     icon: "https://example.com/favicon.ico",
     apple: "https://example.com/apple-icon.png",

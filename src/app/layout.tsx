@@ -10,8 +10,7 @@ export const metadata: Metadata = {
   title: "Denise B Photography",
   keywords: [
     "Fotograaf",
-    "Denise",
-    "Biegelaar",
+    "Denise Biegelaar",
     "DBphotography",
     "Photography",
     "Familie",
@@ -57,9 +56,23 @@ export const metadata: Metadata = {
     "Fotoshoot",
     "Familieshoot",
   ],
+  openGraph: {
+    title: "Denise B Photography",
+    description:
+      "DB Photography is een familie & lifestyle fotograaf uit Hoofddorp, die echte momenten op een ongedwongen en liefdevolle manier vastlegt.",
+    images: [
+      {
+        url: "/images/denise.webp",
+        width: 750, 
+        height: 1124, 
+        alt: "Denise Biegelaar fotograaf uit Hoofddorp",
+      },
+    ],
+    siteName: "https://www.denisebphotography.nl",
+  },
   creator: "Dean Donovan | info@deanstavenuiter.nl",
   description:
-    "DB Photography is een familie & lifestyle fotograaf, die echte momenten op een ongedwongen en liefdevolle manier vastlegt",
+    "DB Photography is een familie & lifestyle fotograaf uit Hoofddorp, die echte momenten op een ongedwongen en liefdevolle manier vastlegt.",
   icons: {
     icon: "https://example.com/favicon.ico",
     apple: "https://example.com/apple-icon.png",
