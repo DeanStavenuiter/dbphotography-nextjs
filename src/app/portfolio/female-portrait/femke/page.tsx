@@ -38,7 +38,7 @@ const Page = () => {
         const data: ListObjectsOutput = await s3.send(command);
 
         const itemKeys = data.Contents?.map((item) => item.Key || "") || [];
-        console.log(itemKeys); // Do something with the item keys
+        // console.log(itemKeys); // Do something with the item keys
 
         setBucketItems(itemKeys);
       } catch (err) {

@@ -42,10 +42,10 @@ export const sendMail = async (
 
   try {
     await transporter.sendMail(mail);
-    console.log('mail verzonden')
+    // console.log('mail verzonden')
     return "success"
   } catch (error) {
-    console.log("Error met mail sturen: ", error);
+    // console.log("Error met mail sturen: ", error);
     throw new Error("Error sending email");
   }
 };
