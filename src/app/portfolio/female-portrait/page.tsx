@@ -35,6 +35,17 @@ const page = () => {
                 />
               </Link>
             </div>
+            <div className={styles.imgCardWrapper}>
+              <Link href={"/portfolio/female-portrait/lies"}>
+                <Image
+                  className={styles.imgCard}
+                  src="https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/portfolio-images/Lies.png"
+                  alt="Lies"
+                  width={250}
+                  height={350}
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </main>

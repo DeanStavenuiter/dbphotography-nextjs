@@ -21,6 +21,7 @@
 
 .imgCard {
   max-width: 380px;
+  max-height: 465px;
   width: 100%;
   height: auto;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);

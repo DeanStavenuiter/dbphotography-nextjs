@@ -29,7 +29,7 @@ const page = () => {
               <Link href={"/portfolio/female-portrait"}>
                 <Image
                   className={styles.imgCard}
-                  src="https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/home-images/Female-portrait.png"
+                  src="https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/portfolio-images/female portrait.png"
                   alt="Portrait van een vrouw"
                   width={250}
                   height={350}
@@ -61,7 +61,7 @@ const page = () => {
               </Link>
             </div>
             <div className={styles.imgCardWrapper}>
-              <Link href={"/portfolio/geboorte/jule"}>
+              <Link href={"/portfolio/geboorte"}>
                 <Image
                   className={styles.imgCard}
                   src="https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/home-images/Geboorte.png"
