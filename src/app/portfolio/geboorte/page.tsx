@@ -1,13 +1,12 @@
-import Footer from '@/app/components/Footer';
-import Header from '@/app/components/Header'
+import Footer from "@/app/components/Footer";
+import Header from "@/app/components/Header";
 import styles from "@/styles/portfolio.module.css";
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
+import Link from "next/link";
+import Image from "next/image";
 
-export const Page = () => {
+const Page = () => {
   return (
-    <div>
+    <>
       <Header />
       <main className={styles.main}>
         <div className={styles.portfolioCards}>
@@ -33,14 +32,14 @@ export const Page = () => {
                   height={340}
                 />
               </Link>
-              
             </div>
           </div>
         </div>
       </main>
       <Footer />
-    </div>
-  )
-}
+    </>
+  );
+};
 
 export default Page;
+
