@@ -20,10 +20,10 @@ const About = () => {
               alt="Denise met Bobby"
             />
           </div>
-          <div className={styles.aboutText}>
+          <article className={styles.aboutText}>
             <h1>About</h1>
             <p>
-              Hi, ik ben Denise 33 jaar oud en woon samen met mijn man Boi,
+              Hi, ik ben Denise 35 jaar oud en woon samen met mijn man Boi,
               zoontje Bobby en onze kat Andy in Hoofddorp.
             </p>
             <p>
@@ -46,7 +46,7 @@ const About = () => {
               Bloemsaat. En fotograferen vind ik stiekem toch wel het
               allerleukst om te doen.
             </p>
-          </div>
+          </article>
         </div>
       </main>
       <Footer />

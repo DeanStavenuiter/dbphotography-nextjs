@@ -1,5 +1,4 @@
-
-
+"use client"
 import Image from "next/image";
 import React, { useState } from "react";
 import styles from "@/styles/header.module.css";
@@ -106,6 +105,7 @@ const Header = () => {
                 <div className={styles.dropdownPortrait}>
                   <Link href={"/portfolio/female-portrait/laura"}>Laura</Link>
                   <Link href={"/portfolio/female-portrait/femke"}>Femke</Link>
+                  <Link href={"/portfolio/female-portrait/lies"}>Lies</Link>
                 </div>
 
                 {/* family */}
@@ -178,8 +178,10 @@ const Header = () => {
                   />
                 </Link>
                 <div className={styles.dropdownGeboorte}>
-                <Link href={"/portfolio/geboorte/jule"}>Jule</Link>
+                  <Link href={"/portfolio/geboorte/jule"}>Jule</Link>
+                  <Link href={"/portfolio/geboorte/dean"}>Dean</Link>
                 </div>
+            
               </div>
             </li>
             <li className={`${styles.navItem} ${styles.prijzen}`}>

@@ -1,10 +1,15 @@
-"use client";
-
 import Image from "next/image";
 import styles from "../styles/page.module.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Gezin & Lifestyle Fotografie | Denise B Photography",
+  description:
+    "Vereeuwig jouw dierbaarste momenten met prachtige foto's. Ervaar onze unieke werkwijze voor warme en natuurlijke familie- en lifestylefotografie. Laat je verrassen door het resultaat!",
+};
 
 export default function Home() {
   return (

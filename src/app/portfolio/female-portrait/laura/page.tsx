@@ -1,100 +1,31 @@
-"use client";;
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
-import React, { useEffect, useState } from "react";
 import styles from "@/styles/album.module.css";
-import Image from "next/image";
-import {
-  S3Client,
-  ListObjectsCommand,
-  ListObjectsOutput,
-} from "@aws-sdk/client-s3";
+import GetImages from "@/app/components/GetImages";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Ode aan Vrouwelijkheid: Portretreis met Laura",
+  description:
+    "Portretshoot: Laura straalde elegantie en allure uit tegen de prachtige omgeving. Ontdek haar betoverende portretten hier!",
+};
 
 const Page = () => {
-  const [bucketItems, setBucketItems] = useState<string[]>([]);
-
-  useEffect(() => {
-    // Create an S3 instance
-    const s3 = new S3Client({
-      region: "eu-north-1",
-      credentials: {
-        accessKeyId: process.env.NEXT_PUBLIC_ACCESS_KEY!,
-        secretAccessKey: process.env.NEXT_PUBLIC_SECRET_KEY!,
-      },
-    });
-
-    // Specify your bucket name
-    const bucketName = process.env.NEXT_PUBLIC_BUCKET_NAME!;
-    const prefix = "Laura/";
-
-    (async () => {
-      try {
-        // List objects in the bucket
-        const command = new ListObjectsCommand({
-          Bucket: bucketName,
-          Prefix: prefix,
-        });
-        const data: ListObjectsOutput = await s3.send(command);
-
-        const itemKeys = data.Contents?.map((item) => item.Key || "") || [];
-        // console.log(itemKeys); // Do something with the item keys
-
-        setBucketItems(itemKeys);
-      } catch (err) {
-        console.error("Error listing bucket items:", err);
-      }
-    })();
-  }, []);
-
   return (
     <>
-    <Header />
-    <main className={styles.main}>
-      <div className={styles.album}>
-        <div className={styles.col}>
-          {bucketItems.slice(0, 2).map((item, index) => {
-            return (
-              <Image
-                key={index}
-                alt={`laura ${index}`}
-                src={`https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/${item}`}
-                width={500}
-                height={500}
-              />
-            );
-          })}
-        </div>
-        <div className={styles.col}>
-        {bucketItems.slice(2, 4).map((item, index) => {
-            return (
-              <Image
-                key={index}
-                alt={`laura ${index}`}
-                src={`https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/${item}`}
-                width={500}
-                height={500}
-              />
-            );
-          })}
-        </div>
-        <div className={styles.col}>
-        {bucketItems.slice(4, 6).map((item, index) => {
-            return (
-              <Image
-                key={index}
-                alt={`laura ${index}`}
-                src={`https://dbphotography-nextjs.s3.eu-north-1.amazonaws.com/${item}`}
-                width={500}
-                height={500}
-              />
-            );
-          })}
-        </div>
-      </div>
-    </main>
-    <Footer />
-  </>
-  )
-}
+      <Header />
+      <main className={styles.main}>
+        <GetImages
+          prefix="Laura/"
+          name="Laura"
+          indexEndFirstCol={2}
+          indexEndSecondCol={4}
+          indexEndThirdCol={6}
+        />
+      </main>
+      <Footer />
+    </>
+  );
+};
 
-export default Page
+export default Page;

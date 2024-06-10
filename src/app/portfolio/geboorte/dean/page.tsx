@@ -16,12 +16,11 @@ const Page = () => {
       <Header />
       <main className={styles.main}>
         <GetImages
-          prefix="Jule/"
-          name="Jule"
-          start={0}
-          indexEndFirstCol={1}
-          indexEndSecondCol={2}
-          indexEndThirdCol={3}
+          prefix="Dean/"
+          name="Dean"
+          indexEndFirstCol={9}
+          indexEndSecondCol={19}
+          indexEndThirdCol={27}
         />
       </main>
       <Footer />

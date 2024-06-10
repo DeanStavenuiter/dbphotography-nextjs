@@ -173,6 +173,11 @@ const Burger = () => {
                           Femke
                         </Link>
                       </li>
+                      <li>
+                        <Link href={"/portfolio/female-portrait/lies"}>
+                          Lies
+                        </Link>
+                      </li>
                     </ul>
                   </li>
 

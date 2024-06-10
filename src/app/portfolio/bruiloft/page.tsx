@@ -1,5 +1,3 @@
-"use client";
-
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
 import styles from "@/styles/portfolio.module.css";
