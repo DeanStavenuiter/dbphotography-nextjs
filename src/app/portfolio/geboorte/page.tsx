@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-export const page = () => {
+export const Page = () => {
   return (
     <div>
       <Header />
@@ -43,4 +43,4 @@ export const page = () => {
   )
 }
 
-export default page;
+export default Page;
