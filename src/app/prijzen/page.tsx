@@ -31,7 +31,7 @@ const page = () => {
             <p>€ 195,-</p>
             <p>Extra foto&apos;s € 5,- per stuk</p>
           </div>
-          {/* <div className={styles.prices}>
+          <div className={styles.prices}>
             <h1>Familie(6 personen of meer)</h1>
             <p>Ongeveer 1,5 - 2 uur shooten</p>
             <p>30 bewerkte foto&apos;s in hoge resolutie</p>
@@ -42,7 +42,7 @@ const page = () => {
             <p>Gratis gebruik van cliënt closet</p>
             <p>€ 250,-</p>
             <p>Extra foto&apos;s € 5,- per stuk</p>
-          </div> */}
+          </div>
 
           <div className={styles.prices}>
             <h1>Female portrait</h1>
